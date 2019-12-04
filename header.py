@@ -9,7 +9,7 @@ __credits__ = ["Matt Duran"]
 __license__ = "GPL"
 __version__ = "1.0.0"
 __maintainer__ = "Matt Duran"
-__email__ = "matduran@campfirecolumbia.org"
+__email__ = "mduran@campfirecolumbia.org"
 __status__ = "Development"
 
 import gc
