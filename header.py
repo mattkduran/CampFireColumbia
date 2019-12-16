@@ -43,6 +43,18 @@ excel.ScreenUpdating = False
 excel.DisplayAlerts = False
 excel.EnableEvents = False
 
+def clearOld():
+    now = time.time()
+    for f in os.listdir(completedDirPPS):
+        if os.stat(os.path.join(completedDirPPS, f)).st_mtime < now - 7 * 86400:
+            os.remove(os.path.join(completedDirPPS, f))
+
+    for f in os.listdir(completedDirWLWV):
+        if os.stat(os.path.join(completedDirWLWV, f)).st_mtime < now - 7 * 86400:
+            os.remove(os.path.join(completedDirWLWV, f))
+
+    return
+
 def menu():
     pps = " Run PPS report (1)\n"
     wlwv = "Run WLWV report (2)\n"
