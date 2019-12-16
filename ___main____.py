@@ -4,5 +4,6 @@ import os
 
 
 def main():
+    clearOld()
     menu()
     return 0
